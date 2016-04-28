@@ -1,11 +1,11 @@
 function all_lottery(){
-  $.getJSON("js/names.json" , function(data){
+  $.getJSON("http://192.168.11.3/moving_seats/js/names.json" , function(data){
     for(var i = 1;i < 7;i++) {
       for(var j = 1;j < 7;j++){
         var idx = getRandomInt(1,data.length);
         var value = data[idx];
         data.splice( idx, idx);
-        $("'#td' + i + '-' + j").text(value);
+        $("'#td' + i + '-' + j").text(value.name);
       }
     }
   });
@@ -39,3 +39,7 @@ $("#all_lottery").click(function(){
 $("#personal_lottery").click(function(){
   personal_lottery();
 });
+
+function getRandomInt(min,max){
+  return Math.floor( Math.random() * (max - mix + 1)) + min;
+}
