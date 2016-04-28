@@ -30,7 +30,6 @@ function personal_lottery(){
 
 window.addEventListener("load",function(eve){
   create_table();
-  all_lottery();
 },false);
 
 $("#all_lottery").click(function(){
