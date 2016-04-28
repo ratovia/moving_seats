@@ -2,7 +2,7 @@ function all_lottery(){
   $.getJSON("http://192.168.11.3/moving_seats/js/names.json" , function(data){
     for(var i = 1;i < 7;i++) {
       for(var j = 1;j < 7;j++){
-        var idx = getRandomInt(0,data.length);
+        var idx = getRandomInt(0,data.length - 1);
         var value = data[idx];
         data.splice( idx, idx);
         var tag = "#td" + i + "-" + j;
