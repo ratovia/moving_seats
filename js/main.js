@@ -5,7 +5,8 @@ function all_lottery(){
         var idx = getRandomInt(1,data.length);
         var value = data[idx];
         data.splice( idx, idx);
-        $("'#td' + i + '-' + j").text(value.name);
+        var tag = "#td" + i + "-" + j;
+        $(tag).text(value.name);
       }
     }
   });
