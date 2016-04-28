@@ -4,7 +4,7 @@ function all_lottery(){
       for(var j = 1;j < 7;j++){
         var idx = getRandomInt(0,data.length - 1);
         var value = data[idx];
-        data.splice( idx, idx);
+        data.splice( idx, 1);
         var tag = "#td" + i + "-" + j;
         $(tag).text(value.name);
       }
