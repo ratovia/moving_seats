@@ -6,7 +6,7 @@ function all_lottery(){
         var value = data[idx];
         data.splice( idx, idx);
         var tag = "#td" + i + "-" + j;
-        $(tag).text(value.name);
+        $(tag).text(value);
       }
     }
   });
