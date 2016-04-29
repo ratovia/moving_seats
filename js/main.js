@@ -40,7 +40,7 @@ function personal_lottery(name){
   while(roopflag){
     if(flag[num]){
       var tag = "#td" + a[num] + "-" + b[num];
-      $(tag).text("抽選");
+      $(tag).text(name);
       roopflag = false;
       flag[num] = false;
     }else{
