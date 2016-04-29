@@ -1,7 +1,6 @@
 var a = new Array(10);
 var b = new Array(10);
-
-
+var flag = new Array(10);
 function all_lottery(){
   $.getJSON("http://192.168.11.3/moving_seats/js/names.json" , function(data){
     for(var i = 1;i < 7;i++) {
@@ -35,20 +34,39 @@ function create_table(){
   $("#table").append(masume);
 }
 
-function personal_lottery(){
+function personal_lottery(name){
+  var roopflag = true;
+  var num = getRandomInt(0,9);
+  while(roopflag){
+    if(flag[num]){
+      var tag = "#td" + a[num] + "-" + b[num];
+      $(tag).text("抽選");
+      roopflag = false;
+      flag[num] = false;
+    }else{
+      num = getRandomInt(0,9);
+      roopflag = true;
+    }
+  }
+
 
 }
 
 window.addEventListener("load",function(eve){
   create_table();
+  all_lottery();
 },false);
 
 $("#all_lottery").click(function(){
   all_lottery();
+  for(var i = 0;i < 10;i++){
+    flag[i] = true;
+  }
 });
 
 $("#personal_lottery").click(function(){
-  personal_lottery();
+  var txt = $('#selection option:selected').text();
+  personal_lottery(txt);
 });
 
 function getRandomInt(min,max){
