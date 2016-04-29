@@ -35,21 +35,26 @@ function create_table(){
 }
 
 function personal_lottery(name){
-  var roopflag = true;
   var num = getRandomInt(0,9);
-  while(roopflag){
+  if(flag[num]){
+    var tag = "#td" + a[num] + "-" + b[num];
+    $(tag).text(name);
+    flag[num] = false;
+  }else{
+    num = getRandomInt(0,9);
     if(flag[num]){
       var tag = "#td" + a[num] + "-" + b[num];
       $(tag).text(name);
-      roopflag = false;
       flag[num] = false;
     }else{
       num = getRandomInt(0,9);
-      roopflag = true;
+      if(flag[num]){
+        var tag = "#td" + a[num] + "-" + b[num];
+        $(tag).text(name);
+        flag[num] = false;
+      }
     }
   }
-
-
 }
 
 window.addEventListener("load",function(eve){
