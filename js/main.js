@@ -10,7 +10,7 @@ function all_lottery(){
         data.splice( idx, 1);
         var tag = "#td" + i + "-" + j;
         $(tag).text(value.name);
-        $(tag).css('background-color',#198b9a));
+        $(tag).css('background-color','#198b9a'));
       }
     }
 
@@ -19,8 +19,8 @@ function all_lottery(){
       b[n] = getRandomInt(1,7);
       var tag = "#td" + a[n] + "-" + b[n];
       $(tag).text("抽選");
-      $(tag).css('background-color', #ffffff));
-      $(tag).css('color', rgb(214, 6, 25)));
+      $(tag).css('background-color', '#ffffff'));
+      $(tag).css('color', '#d60619'));
     }
   });
 };
@@ -42,21 +42,21 @@ function personal_lottery(name){
   if(flag[num]){
     var tag = "#td" + a[num] + "-" + b[num];
     $(tag).text(name);
-    $(tag).css('background-color',#39b84603));
+    $(tag).css('background-color','#31b93d'));
     flag[num] = false;
   }else{
     num = getRandomInt(0,9);
     if(flag[num]){
       var tag = "#td" + a[num] + "-" + b[num];
       $(tag).text(name);
-      $(tag).css('background-color', #39b84603));
+      $(tag).css('background-color', '#31b93d'));
       flag[num] = false;
     }else{
       num = getRandomInt(0,9);
       if(flag[num]){
         var tag = "#td" + a[num] + "-" + b[num];
         $(tag).text(name);
-        $(tag).css('background-color', #39b84603));
+        $(tag).css('background-color','#31b93d' ));
         flag[num] = false;
       }
     }
