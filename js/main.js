@@ -83,7 +83,7 @@ function getRandomInt(min,max){
   return Math.floor( Math.random() * (max - min + 1)) + min;
 }
 
-$('#table td').on("click",function(){
+$('#table td').click(function(){
   var name = $(this)[0];
   console.log("click")
   console.log(name);
