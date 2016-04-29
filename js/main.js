@@ -1,3 +1,7 @@
+var a = new Array(10);
+var b = new Array(10);
+
+
 function all_lottery(){
   $.getJSON("http://192.168.11.3/moving_seats/js/names.json" , function(data){
     for(var i = 1;i < 7;i++) {
@@ -8,6 +12,13 @@ function all_lottery(){
         var tag = "#td" + i + "-" + j;
         $(tag).text(value.name);
       }
+    }
+
+    for(var n = 0;n < 10;n++){
+      a[n] = getRandomInt(1,7);
+      b[n] = getRandomInt(1,7);
+      var tag = "#td" + a[n] + "-" + b[n];
+      $(tag).text(抽選);
     }
   });
 };
