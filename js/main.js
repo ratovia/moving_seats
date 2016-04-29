@@ -10,13 +10,13 @@ function all_lottery(){
         data.splice( idx, 1);
         var tag = "#td" + i + "-" + j;
         $(tag).text(value.name);
-        $(tag).css('background-color','#20bacf');
+        $(tag).css('background-color','#4cbac9');
       }
     }
 
     for(var n = 0;n < 10;n++){
-      a[n] = getRandomInt(1,7);
-      b[n] = getRandomInt(1,7);
+      a[n] = getRandomInt(1,6);
+      b[n] = getRandomInt(1,6);
       var tag = "#td" + a[n] + "-" + b[n];
       $(tag).text("抽選");
       $(tag).css('background-color', '#ffffff');
@@ -41,21 +41,21 @@ function personal_lottery(name){
   if(flag[num]){
     var tag = "#td" + a[num] + "-" + b[num];
     $(tag).text(name);
-    $(tag).css('background-color','#145598');
+    $(tag).css('background-color','#509ac9');
     flag[num] = false;
   }else{
     num = getRandomInt(0,9);
     if(flag[num]){
       var tag = "#td" + a[num] + "-" + b[num];
       $(tag).text(name);
-      $(tag).css('background-color', '#145598');
+      $(tag).css('background-color', '#509ac9');
       flag[num] = false;
     }else{
       num = getRandomInt(0,9);
       if(flag[num]){
         var tag = "#td" + a[num] + "-" + b[num];
         $(tag).text(name);
-        $(tag).css('background-color','#145598' );
+        $(tag).css('background-color','#509ac9');
         flag[num] = false;
       }
     }
