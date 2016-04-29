@@ -18,7 +18,7 @@ function all_lottery(){
       a[n] = getRandomInt(1,7);
       b[n] = getRandomInt(1,7);
       var tag = "#td" + a[n] + "-" + b[n];
-      $(tag).text(抽選);
+      $(tag).text("抽選");
     }
   });
 };
