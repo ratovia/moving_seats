@@ -29,7 +29,7 @@ function create_table(){
   for(var i = 1; i < 7;i++){
     masume += "<tr>";
     for(var j = 1;j < 7;j++){
-      masume += "<td id='td" + i + "-" + j + "'></td>";
+      masume += "<td class='tables' id='td" + i + "-" + j + "'></td>";
     }
     masume += "</tr>"
   }
@@ -82,3 +82,9 @@ $("#personal_lottery").click(function(){
 function getRandomInt(min,max){
   return Math.floor( Math.random() * (max - min + 1)) + min;
 }
+
+$(".tables").click(function(){
+  var name = $(".tables").text();
+  var url = "https://www.google.co.jp/search?q=" + name + "&biw=1061&bih=568&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjKgI6T07TMAhUELaYKHY6hAq8Q_AUIBigB"
+  window.open(url, '_blank');
+});
