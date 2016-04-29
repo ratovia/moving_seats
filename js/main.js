@@ -83,9 +83,9 @@ function getRandomInt(min,max){
   return Math.floor( Math.random() * (max - min + 1)) + min;
 }
 
-$('#table td').click(function(){
-  var name = $(this)[0];
-  console.log("click")
+$('td').click(function(){
+  var name = $(this).text();
+  console.log("click");
   console.log(name);
   var url = "https://www.google.co.jp/search?q=" + name + "&biw=1061&bih=568&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjKgI6T07TMAhUELaYKHY6hAq8Q_AUIBigB"
   window.open(url, '_blank');
