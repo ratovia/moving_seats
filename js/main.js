@@ -2,7 +2,7 @@ var a = new Array(10);
 var b = new Array(10);
 var flag = new Array(10);
 function all_lottery(){
-  $.getJSON("http://192.168.11.3/moving_seats/js/names.json" , function(data){
+  $.getJSON("http://localhost/moving_seats/js/names.json" , function(data){
     for(var i = 1;i < 7;i++) {
       for(var j = 1;j < 7;j++){
         var idx = getRandomInt(0,data.length - 1);
